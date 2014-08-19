@@ -28,7 +28,7 @@
 		};
 		this.preload();
 	};
-	$.fn["imageLoaderInfo"] = function (parameter) {
+	$.fn.imageLoaderInfo = function (parameter) {
 		var params = arguments;
 		var method = typeof parameter == 'string' ? parameter : null;
 		return this.each(function () {
