@@ -3,6 +3,7 @@
 		console.log (element);
 		// Settings
 		var settings = $.extend({
+			error: function () {},
 			complete: function () {},
 			loadedItem: function () {}
 		}, options || {});
@@ -23,6 +24,9 @@
 						settings.complete(data);
 					}
 			    };
+				image.onerror = function (){
+					settings.error(item);
+				};
 			    image.src = img.attr('src');
 			});
 		};
