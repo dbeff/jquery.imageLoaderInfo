@@ -8,7 +8,7 @@ $("div").imageLoaderInfo({
 		loadedItem:function (item){
 			console.log ("complete to load " + item.index());
 		},
-		error:function (){
+		error:function (item){
 			console.log ("image load error");
 		},
 		complete:function (){
